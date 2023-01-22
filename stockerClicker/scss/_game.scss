@@ -1,0 +1,116 @@
+.game {
+  display: none;
+  &_start {
+    animation: downUp 1s cubic-bezier(0.5, -1, 0.5, 2);
+  }
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__illustrator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__draw {
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-weight: 700;
+    background: #330000;
+    color: #ff9a00;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+
+  &__description {
+    max-width: 300px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  &__makeset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    border: 1px solid gray;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+
+    &:hover {
+      color: white;
+      background-color: $primary-color;
+      border: 1px solid transparent;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icons {
+  }
+
+  &__sets {
+  }
+
+  &__income-icons {
+  }
+
+  &__income-sets {
+  }
+
+  &__income-total {
+  }
+
+  &__income {
+  }
+}
+.container {
+}
+.icons,
+.sets,
+.income-icons,
+.income-sets,
+.sum {
+  font-weight: 700;
+}
+
+progress::-webkit-progress-bar {
+  background: rgb(243, 243, 243);
+  transform: scale(1.5);
+}
+progress::-webkit-progress-value {
+  background: $primary-color;
+}
+
+@keyframes downUp {
+  0% {
+    transform: translateY(250px);
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
