@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Snake game</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__group">
+          <div class="header__logo">
+            St<img
+              src="img/shutterLogo.png"
+              alt="Shutterstock logo"
+              class="header__shutter"
+            />cker Clicker
+          </div>
+          <button class="header__button">Start New Game</button>
+          <div class="header__welcome">123</div>
+          <div class="header__name">
+            <input
+              type="text"
+              name=""
+              id="yourNameInput"
+              class="header__input"
+              placeholder="Enter your name"
+            />
+            <button class="header__enter">Enter</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="game">
+      <div class="container">
+        <div class="game__flex">
+          <div class="game__illustrator">
+            <div class="game__draw">AI</div>
+            <div class="game__description">
+              Водите курсором по Adobe Illustrator, чтобы нарисовать иконку
+            </div>
+            <progress
+              class="game__draw-progress"
+              value="10"
+              max="100"
+            ></progress>
+          </div>
+          <div class="game__makeset">
+            <div class="game__description">
+              Нажимайте на кнопку, чтобы сделать сет (нужно 20 иконок)
+            </div>
+            <button class="game__button">Сделать сет</button>
+            <progress
+              class="game__set-progress"
+              value="10"
+              max="100"
+            ></progress>
+          </div>
+          <div class="game__stats">
+            <div class="game__icons">
+              Количество иконок: <span class="icons"></span>
+            </div>
+            <div class="game__sets">
+              Количество сетов: <span class="sets"></span>
+            </div>
+            <div class="game__income-icons">
+              Заработок с иконок: <span class="income-icons"></span>$
+            </div>
+            <div class="game__income-sets">
+              Заработок с сетов: <span class="income-sets"></span>$
+            </div>
+            <div class="game__income-total">
+              Сумма: <span class="sum"></span>$
+            </div>
+            <div class="game__income"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

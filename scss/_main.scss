@@ -1,0 +1,122 @@
+* {
+  font-family: "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 52px auto;
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__logo {
+    font-size: 72px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    display: flex;
+  }
+
+  &__shutter {
+    max-width: 64px;
+    max-height: 64px;
+    align-self: center;
+  }
+
+  &__button {
+    opacity: 1;
+    border: 1px solid gray;
+    padding: 10px 15px;
+    border-radius: 8px;
+
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      color: white;
+      background-color: $primary-color;
+      border: 1px solid transparent;
+    }
+
+    &_start {
+      animation: upUp 1s cubic-bezier(0.5, -1, 0.5, 2) infinite;
+    }
+  }
+
+  &__input {
+    animation: downUp 1s cubic-bezier(0.5, -1, 0.5, 2);
+    display: none;
+    border: 1px solid gray;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    &::placeholder {
+      font-weight: 400;
+    }
+    &:focus::placeholder {
+      color: transparent;
+    }
+    &:hover::placeholder {
+      color: $primary-color;
+    }
+    &:focus,
+    &:hover {
+      border-color: $primary-color;
+    }
+    &_start {
+      animation: upUp 1s cubic-bezier(0.5, -1, 0.5, 2) infinite;
+    }
+  }
+
+  &__enter {
+    animation: downUp 1s cubic-bezier(0.5, -1, 0.5, 2);
+    display: none;
+    opacity: 1;
+    border: 1px solid gray;
+    padding: 10px 15px;
+    border-radius: 8px;
+
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      color: white;
+      background-color: $primary-color;
+      border: 1px solid transparent;
+    }
+
+    &_start {
+      animation: upUp 1s cubic-bezier(0.5, -1, 0.5, 2) infinite;
+    }
+  }
+  &__welcome {
+    display: none;
+  }
+}
+
+@keyframes upUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-250px);
+  }
+}
+@keyframes downUp {
+  0% {
+    transform: translateY(250px);
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
